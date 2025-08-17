@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Group Video Chat App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Group Video Chat</h1>
+
+  <!-- Video Chat -->
+  <div id="video-container">
+    <iframe src="https://vondoom.daily.co/vondoom" width="600" height="400" allow="camera; microphone; fullscreen; speaker; display-capture"></iframe>
+  </div>
+
+  <!-- Chat -->
+  <div id="chat-container">
+    <input type="text" id="chat-input" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+    <ul id="chat-messages"></ul>
+  </div>
+
+  <!-- Poll -->
+  <button onclick="showPoll()">Create Poll</button>
+  <div id="poll-modal" style="display:none;">
+    <h3>Poll</h3>
+    <input type="text" id="poll-question" placeholder="Your question">
+    <button onclick="submitPoll()">Submit</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
